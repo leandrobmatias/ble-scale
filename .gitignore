@@ -1,0 +1,6 @@
+# Env
+.env
+.env.*
+!.env.example
+.venv/
+.pre-commit-config.yaml
