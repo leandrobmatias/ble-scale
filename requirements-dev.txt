@@ -1,0 +1,7 @@
+black>=24.3
+ruff>=0.5
+mypy>=1.10
+pytest>=8.2
+pytest-asyncio>=0.23
+pre-commit>=3.7
+commitizen>=3.27
