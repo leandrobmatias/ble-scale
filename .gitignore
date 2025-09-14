@@ -1,6 +1,93 @@
-# Env
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment variables and local config
 .env
 .env.*
-!.env.example
-.venv/
-.pre-commit-config.yaml
+*.envrc
+*.local
+
+# VS Code settings
+.vscode/
+
+# PyCharm/IDEA settings
+.idea/
+
+# Sublime Text settings
+*.sublime-workspace
+*.sublime-project
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.AppleDouble
+.LSOverride
+
+# Type checker caches
+.mypy_cache/
+.pyre/
+.pyright/
+.dmypy.json
+dmypy.json
+
+# Profiling data
+.prof
+*.lprof
+
+# Sphinx documentation
+docs/_build/
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
+*~
+
+# Logs
+*.log
+
+# Lock files
+requirements.lock.txt
+
+# Local databases
+*.sqlite3
+*.db
+
+# Project Notes
+Notes.txt
