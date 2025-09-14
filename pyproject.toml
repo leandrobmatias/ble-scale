@@ -1,9 +1,16 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "ble-scale"
 version = "0.1.0"
-description = "BLE scale reader"
-readme = "README.md"
+description = "Mi Scale BLE sniffer (Bleak-based) with pluggable handlers"
+readme = { file = "README.md", content-type = "text/markdown", encoding = "utf-8" }
 requires-python = ">=3.10"
+authors = [{ name = "Leandro" }]
+license = { text = "MIT" }
+
 dependencies = [
     "Jinja2==3.1.6",
     "MarkupSafe==3.0.2",
@@ -21,17 +28,24 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
-    "black==25.1.0",
-    "mypy==1.18.1",
-    "pre_commit==4.3.0",
-    "pytest==8.4.2",
-    "pytest-asyncio==1.2.0",
-    "ruff==0.13.0",
+  "black==25.1.0",
+  "ruff==0.13.0",
+  "mypy==1.18.1",
+  "pytest==8.4.2",
+  "pytest-asyncio==1.2.0",
+  "pre_commit==4.3.0",
 ]
 
-[build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
+# Console command installed by pip
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+
+[project.scripts]
+mi-scale-sniffer = "main:main"
 
 [tool.black]
 line-length = 100
@@ -43,4 +57,4 @@ target-version = "py310"
 
 [tool.pytest.ini_options]
 addopts = "-q"
-pythonpath = ["src"]
+pythonpath = ["BLE-SCALE"]

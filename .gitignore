@@ -88,3 +88,6 @@ requirements.lock.txt
 # Local databases
 *.sqlite3
 *.db
+
+# Project Notes
+Notes.txt
